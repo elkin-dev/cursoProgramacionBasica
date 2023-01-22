@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mokepon</title>
-  </head>
 
-  <body>
-    <h1>MOKEPON! 🔥💧🌱</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Mokepon</title>
+</head>
 
-    <section id="seleccionar-mascota">
-      <h2>Elige a tu mascota:</h2>
-      <!-- las mascotas -->
-      <label for="hipodoge">Hipodoge</label>
+<body>
+  <section id="seleccionar-mascota">
+    <h1 class="titulo">Mokepon</h1>
+    <h2 class="subtitulo">Elige a tu mascota:</h2>
+
+    <div class="tarjetas">
       <input type="radio" name="mascota" id="hipodoge" />
+      <label class="tarjeta-mokepon" for="hipodoge">
+        <p>Hipodoge</p>
+        <img src="/assets/tipoAgua.png" alt="Hipodoge" />
+      </label>
 
-      <label for="capipepo">Capipepo</label>
       <input type="radio" name="mascota" id="capipepo" />
+      <label class="tarjeta-mokepon" for="capipepo">
+        <p>Capipepo</p>
+        <img src="/assets/tipoFuego.png" alt="Capipepo" />
+      </label>
 
-      <label for="ratigueya">Ratigueya</label>
       <input type="radio" name="mascota" id="ratigueya" />
+      <label class="tarjeta-mokepon" for="ratigueya">
+        <p>Ratigueya</p>
+        <img src="/assets/tipoTierra.png" alt="Ratigueya" />
+      </label>
 
-      <button id="btn-mascota">Seleccionar</button>
-    </section>
+    </div>
+    <button id="btn-mascota">Seleccionar</button>
+  </section>
 
-    <section id="seleccionar-ataque">
-      <h2>Elige tu ataque:</h2>
-      <p>
-        Tu mascota <span id="mascota-jugador"></span> tiene
-        <span id="vidas-jugador">3</span> vidas
-      </p>
-      <p>
-        la mascota <span id="mascota-enemigo"></span> del enemigo tiene
-        <span id="vidas-enemigo">3</span> vidas
-      </p>
-      <p>
-        <button id="btn-fuego">Fuego 🔥</button>
-        <button id="btn-agua">Agua 💧</button>
-        <button id="btn-tierra">Tierra 🌱</button>
-      </p>
-    </section>
-    <section id="mensajes">
-      <!-- <p>
-        Tu mascota ataco con FUEGO, la mascota del enemigo ataco con TIERRA,
-        GANASTE
-      </p> -->
-    </section>
-    <br />
-    <section id="reiniciar">
-      <button id="btn-reiniciar">Reiniciar</button>
-    </section>
-    <script src="../js/mokepon.js"></script>
-  </body>
+  <section id="seleccionar-ataque">
+    <h1 class="titulo">Mokepon</h1>
+    <h2 class="subtitulo">Elige tu ataque:</h2>
+
+    <div class="tarjetas-ataques">
+      <button id="btn-fuego" class="btn-ataque">Fuego 🔥</button>
+      <button id="btn-agua" class="btn-ataque">Agua 💧</button>
+      <button id="btn-tierra" class="btn-ataque">Tierra 🌱</button>
+    </div>
+
+    <div id="mensajes">
+      <p id="resultado">Mucha suerte!</p>
+      <section id="reiniciar">
+        <button id="btn-reiniciar">Reiniciar</button>
+      </section>
+    </div>
+
+    <div class="ataques">
+      <div class="ataques-jugador">
+        <p id="vidas-jugador">3</p>
+        <p id="mascota-jugador"></p>
+        <div id="ataques-jugador"></div>
+      </div>
+      <div class="ataques-enemigo">
+        <p id="vidas-enemigo">3</p>
+        <p id="mascota-enemigo"></p>
+        <div id="ataques-enemigo"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="../js/mokepon.js"></script>
+</body>
+
 </html>

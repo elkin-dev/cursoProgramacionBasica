@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #041562;
+}
+
+#seleccionar-mascota {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.titulo {
+  color: white;
+  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
+}
+
+.subtitulo {
+  color: white;
+  font-size: 20px;
+}
+
+.tarjetas,
+.tarjetas-ataques {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-mokepon {
+  width: 180px;
+  height: 100px;
+  color: white;
+  background: aquamarine;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: #114685;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-mokepon img {
+  width: 80px;
+}
+
+input {
+  display: none;
+}
+
+input:checked+label {
+  width: 180px;
+  background: #8EA7E9ed;
+}
+
+#btn-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 30px;
+}
+
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-ataque {
+  background: #114685;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-color: transparent;
+  width: 100px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+#mensajes {
+  width: 280px;
+  background: #EEEEEE;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#btn-reiniciar {
+  border: transparent;
+  color: #114685;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  text-align: center;
+}
+
+.ataques-jugador,
+.ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+
+}
+
+
+
+
+
+@media(max-width: 360px) {
+
+  .tarjetas,
+  .tarjetas-ataques {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+}

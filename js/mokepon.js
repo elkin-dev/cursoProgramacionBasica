@@ -38,7 +38,7 @@ function ataqueAgua() {
 function ataqueTierra() {
   ataqueJugador = 'TIERRA'
   ataqueAleatorioEnemigo()
-} 
+}
 
 function ataqueAleatorioEnemigo() {
   let _ataqueAleatorio = aleatorio(1, 3)
@@ -54,12 +54,21 @@ function ataqueAleatorioEnemigo() {
 
 }
 
-function crearMensaje(resultadoCombate) {
-  let _setcionMensajes = document.getElementById('mensajes')
-  let _parrafo = document.createElement('p')
-  _parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ' la mascota del enemigo ataco con ' + ataqueEnemigo + ' - ' + resultadoCombate
-  _setcionMensajes.appendChild(_parrafo)
+function crearMensaje(resultado) {
+  let _setcionMensajes = document.getElementById('resultado')
+  let _ataquesJugador = document.getElementById('ataques-jugador')
+  let _ataquesEnemigo = document.getElementById('ataques-enemigo')
 
+
+  let _nuevoAtaqueJugador = document.createElement('p')
+  let _nuevoAtaqueEnemigo = document.createElement('p')
+
+  _setcionMensajes.innerHTML = resultado
+  _nuevoAtaqueJugador.innerHTML = ataqueJugador
+  _nuevoAtaqueEnemigo.innerHTML = ataqueEnemigo
+
+  _ataquesJugador.appendChild(_nuevoAtaqueJugador)
+  _ataquesEnemigo.appendChild(_nuevoAtaqueEnemigo)
 
 }
 
@@ -98,10 +107,9 @@ function revisarVidas() {
 }
 
 function crearMensajeFinal(resuladoFinal) {
-  let _setcionMensajes = document.getElementById('mensajes')
-  let _parrafo = document.createElement('p')
-  _parrafo.innerHTML = resuladoFinal
-  _setcionMensajes.appendChild(_parrafo)
+  let _setcionMensajes = document.getElementById('resultado')
+
+  _setcionMensajes.innerHTML = resuladoFinal
 
   let _btnFuego = document.getElementById('btn-fuego')
   _btnFuego.disabled = true
@@ -120,7 +128,7 @@ function seleccionarMascotaJugador() {
 
   // Mostrando esta seccion antes de operar el codigo de seleccionarMascotaJugador
   let _sectionSelecciorAtaque = document.getElementById('seleccionar-ataque')
-  _sectionSelecciorAtaque.style.display = 'block'
+  _sectionSelecciorAtaque.style.display = 'flex'
 
   let _inputHipodoge = document.getElementById('hipodoge')
   let _inputCapipepo = document.getElementById('capipepo')
