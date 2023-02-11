@@ -83,7 +83,7 @@ input:checked+label {
   padding: 10px;
   box-sizing: border-box;
   border-color: transparent;
-  width: 100px;
+  width: 80px;
   font-family: 'Poppins', sans-serif;
   color: white;
 }
@@ -130,8 +130,5 @@ input:checked+label {
   .tarjetas-ataques {
     display: flex;
     flex-direction: column;
-
   }
-
-
 }
